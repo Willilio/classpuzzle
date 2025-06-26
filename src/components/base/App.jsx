@@ -1,5 +1,7 @@
+import PuzzleBoard from "../board/PuzzleBoard";
+
 const App = () => {
-    return <p>Hello World!</p>;
-}
+    return <PuzzleBoard />;
+};
 
 export default App;
