@@ -1,4 +1,5 @@
 @import url("board/board.css");
+@import url("action/action.css");
 
 body {
   padding: 0;

@@ -1,3 +1,7 @@
+.classpuzzle-container {
+  display: flex;
+}
+
 .classpuzzle-board {
   aspect-ratio: 1;
   background-color: red;
