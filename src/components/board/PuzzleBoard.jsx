@@ -1,6 +1,10 @@
 import { useMemo } from "react";
 import PuzzleRow from "./PuzzleRow";
 
+/**
+ * The Puzzle Board contains the puzzle itself
+ * @param {{boardState: [number]}} props
+ */
 const PuzzleBoard = ({ boardState }) => {
     const rowValues = useMemo(() => {
         const lol = [];
