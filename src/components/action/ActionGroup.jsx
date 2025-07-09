@@ -2,6 +2,10 @@ import { useMemo } from "react";
 import BoardSetup from "./content/BoardSetup";
 
 /**
+ * @typedef {('light'|'dark')} ActionThemes
+ */
+
+/**
  * Creates the content from the type of action
  * @param {('BoardSetup')} contentType
  */
