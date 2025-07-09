@@ -1,3 +1,4 @@
+import ActionList from "../action/ActionList";
 import PuzzleBoard from "../board/PuzzleBoard";
 
 const exampleBoardState = [
@@ -9,8 +10,21 @@ const exampleBoardState = [
     0, 0, 0, 1, 1, 0,
 ];
 
+/** @type {[import('../action/ActionList').ActionParams]} */
+const testActions = [
+    {
+        name: 'BoardSetup',
+        enabled: true,
+    },
+]
+
 const App = () => {
-    return <PuzzleBoard boardState={exampleBoardState} />;
+    return (
+        <div className="app-container">
+            <PuzzleBoard boardState={exampleBoardState} />
+            <ActionList actions={testActions} />
+        </div>
+    );
 };
 
 export default App;
