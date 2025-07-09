@@ -1,0 +1,49 @@
+.actionlist-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 60px;
+}
+
+.actiongroup {
+  display: flex;
+  padding: 4px;
+  margin: 8px;
+  border-radius: 4px;
+  background-color: darkgray;
+}
+
+.boardsetup-lightgroup-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: lightblue;
+  padding: 8px;
+}
+
+.boardsetup-lightgroup-title {
+  width: 90%;
+  align-self: center;
+  text-align: center;
+  border-bottom: 1px solid darkgray;
+  margin: 0;
+  padding: 8px 0 8px 0;
+  font-weight: bold;
+  font-size: large;
+  user-select: none;
+}
+
+.actionbutton {
+  width: 90%;
+  align-self: center;
+  padding: 8px;
+  border: 2px solid darkgray;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin-top: 12px;
+  user-select: none;
+}
+
+.actionbutton:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
