@@ -1,13 +1,20 @@
 .classpuzzle-container {
   display: flex;
+  justify-content: center;
+  width: 50%;
+  padding: 60px;
 }
 
 .classpuzzle-board {
   display: flex;
+  align-self: center;
   flex-direction: column;
 
-  aspect-ratio: 1;
-  background-color: red;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+
+  border: solid 1px darkgray;
+  box-shadow: 0 0 2px 3px darkgray;
 }
 
 .classpuzzle-row {
@@ -16,13 +23,19 @@
 }
 
 .classpuzzle-square {
+  flex-grow: 1;
   aspect-ratio: 1;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid darkgray;
+  padding: 8px;
+  background-color: lightyellow;
 }
 
 .classpuzzle-square1 {
-  background-color: blue;
+  background-color: lightblue;
 }
 
 .classpuzzle-square2 {
-  background-color: green;
+  background-color: lightgreen;
 }

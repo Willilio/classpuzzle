@@ -1,6 +1,6 @@
 const ActionButton = ({ themePrefix, text, handleOnClick }) => {
     return (
-        <div className={`${themePrefix}-actionbutton`} onClick={handleOnClick}>
+        <div className={`${themePrefix}-actionbutton actionbutton`} onClick={handleOnClick}>
             {text}
         </div>
     );
