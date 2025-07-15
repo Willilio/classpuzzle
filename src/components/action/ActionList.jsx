@@ -1,5 +1,5 @@
-import { useMemo } from "react";
-import ActionGroup from "./ActionGroup";
+import { useMemo } from 'react';
+import ActionGroup from './ActionGroup';
 
 /**
  * @typedef {Object} ActionParams
@@ -16,17 +16,17 @@ import ActionGroup from "./ActionGroup";
  * @param {ActionListParams} props
  */
 const ActionList = ({ actions }) => {
-    const groupings = useMemo(() => {
-        return actions.map(groupData => (
-            <ActionGroup group={groupData} />
-        ));
-    }, [actions]);
+  const groupings = useMemo(() => {
+    return actions.map(groupData => (
+      <ActionGroup group={groupData} />
+    ));
+  }, [actions]);
 
-    return (
-        <div className="actionlist-container">
-            {groupings}
-        </div>
-    );
-}
+  return (
+    <div className="actionlist-container">
+      {groupings}
+    </div>
+  );
+};
 
 export default ActionList;
