@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
 import boardStateReducer from './slices/boardState';
 
 export default configureStore({
