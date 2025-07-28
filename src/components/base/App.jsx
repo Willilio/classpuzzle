@@ -1,14 +1,6 @@
+import { useSelector } from 'react-redux';
 import ActionList from '../action/ActionList';
 import PuzzleBoard from '../board/PuzzleBoard';
-
-const exampleBoardState = [
-  1, 0, 0, 0, 2, 0,
-  2, 1, 1, 0, 0, 0,
-  0, 1, 2, 0, 0, 0,
-  0, 0, 0, 0, 0, 0,
-  0, 0, 0, 2, 2, 1,
-  0, 0, 0, 1, 1, 0,
-];
 
 /** @type {[import('../action/ActionList').ActionParams]} */
 const testActions = [
@@ -19,9 +11,11 @@ const testActions = [
 ];
 
 const App = () => {
+  const gameBoardState = useSelector((state) => state.boardState.board);
+
   return (
     <div className="app-container">
-      <PuzzleBoard boardState={exampleBoardState} />
+      <PuzzleBoard boardState={gameBoardState} />
       <ActionList actions={testActions} />
     </div>
   );

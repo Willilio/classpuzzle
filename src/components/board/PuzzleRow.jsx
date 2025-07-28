@@ -1,10 +1,19 @@
 import { useMemo } from 'react';
 import PuzzleSquare from './PuzzleSquare';
 
-const PuzzleRow = ({ squareStates }) => {
+/**
+ * @typedef {Object} PuzzleRowProps
+ * @property {[number]} squareStates The numbers representing the states of each square
+ * @property {(number) => void} onRowClick The callback for clicking on a square
+ */
+
+/**
+ * @param {PuzzleRowProps} props
+ */
+const PuzzleRow = ({ squareStates, onRowClick }) => {
   const squares = useMemo(() => {
-    return squareStates.map(state => (
-      <PuzzleSquare squareState={state} />
+    return squareStates.map((state, index) => (
+      <PuzzleSquare squareState={state} onSquareClick={() => onRowClick(index)} />
     ));
   }, [squareStates]);
 
