@@ -3,7 +3,7 @@ import { useMemo } from 'react';
 /**
  * @typedef {Object} PuzzleSquareProps
  * @property {number} squareState The state of the square
- * @property {() => void} onSquareClick The callback for clicking the square
+ * @property {(isRightClick: boolean) => void} onSquareClick The callback for clicking the square
  */
 
 /**
@@ -15,7 +15,13 @@ const PuzzleSquare = ({ squareState, onSquareClick }) => {
     return `classpuzzle-square ${isNonTrivialState ? `classpuzzle-square${squareState}` : ''}`;
   }, [squareState]);
 
-  return (<div className={squareClasses} onClick={onSquareClick}>
+  return (<div
+    className={squareClasses}
+    onClick={() => onSquareClick(false)}
+    onContextMenu={e => {
+      e.preventDefault();
+      onSquareClick(true);
+    }} >
     Puzzle Square!
   </div>);
 };

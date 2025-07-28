@@ -19,8 +19,13 @@ const createActionContent = contentType => {
 };
 
 /**
+ * @typedef {Object} ActionGroupProps
+ * @property {import('./ActionList').ActionParams} group
+ */
+
+/**
  * ActionGroup is a placeholder for different groups of actions which can be placed on screen
- * @param {{group: import('./ActionList').ActionParams}} props
+ * @param {ActionGroupProps} props
  */
 const ActionGroup = ({ group }) => {
   const groupContent = useMemo(() => createActionContent(group.name), [group.name]);

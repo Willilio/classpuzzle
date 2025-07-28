@@ -4,8 +4,13 @@ import { useDispatch } from 'react-redux';
 import { resetBoard } from '../../../services/slices/boardState';
 
 /**
+ * @typedef {Object} BoardSetupProps
+ * @property {import('../ActionGroup').ActionThemes} theme The theme of this action component
+ */
+
+/**
  * The board setup action group contains the controls to setup the puzzle board as desired
- * @param {{theme: import('../ActionGroup').ActionThemes}} props
+ * @param {BoardSetupProps} props
  */
 const BoardSetup = ({ theme='light' }) => {
   const dispatch = useDispatch();
