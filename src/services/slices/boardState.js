@@ -28,6 +28,8 @@ export const boardStateSlice = createSlice({
      */
     cycleSquare: (state, action) => {
       state.board[action.payload.squareID] += action.payload.direction;
+      // In order to handle negative directions, we add the number of states
+      state.board[action.payload.squareID] += state.numStates;
       state.board[action.payload.squareID] %= state.numStates;
     },
     /**

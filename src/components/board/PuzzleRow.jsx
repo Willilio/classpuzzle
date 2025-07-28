@@ -13,9 +13,9 @@ import PuzzleSquare from './PuzzleSquare';
 const PuzzleRow = ({ squareStates, onRowClick }) => {
   const squares = useMemo(() => {
     return squareStates.map((state, index) => (
-      <PuzzleSquare squareState={state} onSquareClick={() => onRowClick(index)} />
+      <PuzzleSquare squareState={state} onSquareClick={isRightClick => onRowClick(isRightClick, index)} />
     ));
-  }, [squareStates]);
+  }, [squareStates, onRowClick]);
 
   return <div className="classpuzzle-row">{squares}</div>;
 };
